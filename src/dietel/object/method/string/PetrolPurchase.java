@@ -18,6 +18,14 @@ public class PetrolPurchase {
     private double price;
     private double discount;
 
+    public PetrolPurchase(String location, String petrolType, int quantityPurchased, double price, double discount) {
+        this.location = location;
+        this.petrolType = petrolType;
+        this.quantityPurchased = quantityPurchased;
+        this.price = price;
+        this.discount = discount;
+    }
+
     public String getLocation() {
         return location;
     }
@@ -56,5 +64,9 @@ public class PetrolPurchase {
 
     public void setDiscount(double discount) {
         this.discount = discount;
+    }
+
+    public double getPurchaseAmount() {
+        return getPrice() * getQuantityPurchased() - getDiscount();
     }
 }
