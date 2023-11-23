@@ -18,6 +18,21 @@ public class Account {
         }
     }
 
+    /*
+    (Modified Account Class) Modify class Account (Fig. 3.8) to provide a method called withdraw that withdraws
+    money from an Account. Ensure that the withdrawal amount does not exceed the Account’s balance. If it does,
+    the balance should be left unchanged and the method should print
+    a message indicating "Withdrawal amount exceeded account balance." Modify class AccountTest
+    (Fig. 3.9) to test method withdraw.
+     */
+    public void withDraw(double amount) {
+        if (amount > balance) {
+            System.out.printf("%s%n%n", "Withdrawal amount exceeded account balance.");
+        } else {
+            balance = balance - amount;
+        }
+    }
+
     public double getBalance() {
         return balance;
     }
