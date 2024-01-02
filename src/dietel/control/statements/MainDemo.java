@@ -1,2 +1,3 @@
-package dietel.control.statements;public class MainDemo {
+package dietel.control.statements;
+public class MainDemo {
 }
